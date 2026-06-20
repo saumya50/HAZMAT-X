@@ -9,7 +9,7 @@ body,
 #root {
   width: 100vw;
   height: 100vh;
-  overflow: hidden; /* Prevents ugly double scrollbars */
+  overflow: hidden; 
   background-color: #0f172a;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
