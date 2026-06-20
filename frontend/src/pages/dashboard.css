@@ -26,3 +26,121 @@ body,
   --status-warning: #d97706;
   --status-success: #10b981;
 }
+
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+.sidebar {
+  width: 260px;
+  height: 100%;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.brand-icon {
+  height: 32px;
+  width: 32px;
+  background-color: var(--brand-color);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #020617;
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--brand-color);
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link.active {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--brand-color);
+}
+
+.nav-link:hover:not(.active) {
+  background-color: #1e293b;
+  color: var(--text-primary);
+}
+
+.sidebar-footer {
+  color:#d4e1f3;
+  font-size: 0.75rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.main-viewport {
+  flex: 1;
+  height: 100%;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.header-meta h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.header-meta p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.status-badge {
+  font-size: 0.875rem;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.status-indicator {
+  color: var(--status-success);
+  font-weight: 600;
+}
