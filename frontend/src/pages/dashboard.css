@@ -209,3 +209,107 @@ body,
   50% { opacity: 1; transform: scale(1.2); }
   100% { opacity: 0.4; transform: scale(0.9); }
 }
+.table-section {
+  background-color: var(--bg-sidebar);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.table-header-bar {
+  margin-bottom: 1.25rem;
+}
+
+.table-header-bar h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.table-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.inventory-table th {
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.inventory-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.inventory-table tr:hover td {
+  background-color: rgba(30, 41, 59, 0.4);
+}
+
+.tech-code {
+  font-family: monospace;
+  color: var(--brand-color);
+  font-weight: 600;
+}
+
+.chem-name {
+  font-weight: 500;
+}
+
+.chem-formula code {
+  background-color: #1e293b;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: #e2e8f0;
+}
+
+.hazard-tag {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+
+.status-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 50px;
+}
+
+.pill-stable {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--status-success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.pill-warning {
+  background-color: rgba(217, 119, 6, 0.1);
+  color: var(--status-warning);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+.pill-critical {
+  background-color: rgba(244, 63, 94, 0.1);
+  color: var(--status-danger);
+  border: 1px solid rgba(244, 63, 94, 0.2);
+}
