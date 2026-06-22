@@ -101,7 +101,7 @@ body,
 }
 
 .sidebar-footer {
-  color:#d4e1f3;
+  color: #a6bfe2;
   font-size: 0.75rem;
   border-top: 1px solid var(--border);
   padding-top: 1rem;
@@ -143,4 +143,69 @@ body,
 .status-indicator {
   color: var(--status-success);
   font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: var(--bg-sidebar);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.card-title {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.card-number.danger-text {
+  color: var(--status-danger);
+}
+
+.progress-track {
+  width: 100%;
+  background-color: #1e293b;
+  height: 6px;
+  border-radius: 3px;
+  margin-top: 0.75rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background-color: var(--brand-color);
+  height: 100%;
+  border-radius: 3px;
+}
+
+.alert-ping {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  height: 8px;
+  width: 8px;
+  background-color: var(--status-danger);
+  border-radius: 50%;
+  animation: pulse-effect 1.5s infinite;
+}
+
+@keyframes pulse-effect {
+  0% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.4; transform: scale(0.9); }
 }
