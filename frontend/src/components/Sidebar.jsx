@@ -18,7 +18,7 @@ export default function Sidebar() {
       </div>
       
       <div className="sidebar-footer">
-        MNNIT Chemical Engineering Dept.
+       HazMat-X Core v1.0.0
       </div>
     </aside>
   );
