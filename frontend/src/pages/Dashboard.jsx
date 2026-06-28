@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import MetricGrid from '../components/MetricGrid';
 import InventoryTable from '../components/InventoryTable';
-import './dashboard.css';
+import Login from './Login';
+import './Dashboard.css';
 
 export default function Dashboard() {
   const [metrics] = useState({
@@ -22,7 +23,7 @@ export default function Dashboard() {
   return (
     <div className="app-container">
       
-      <Sidebar />
+      <Sidebar/>
 
       <main className="main-viewport">
         <header className="view-header">
