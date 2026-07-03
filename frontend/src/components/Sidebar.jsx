@@ -1,24 +1,24 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import "./sidebar.css"; // ✨ Points directly to your new isolated styles!
 
 export default function Sidebar() {
   return (
     <aside className="sidebar">
-      <div>
-        <div className="sidebar-brand">
-          <div className="brand-icon">X</div>
-          <h1 className="brand-text">HazMat-X</h1>
-        </div>
-        
-        <nav className="nav-menu">
-          <a href="#" className="nav-link active">📊 Central Dashboard</a>
-          <a href="#" className="nav-link">📦 Inventory Ledger</a>
-          <a href="#" className="nav-link">🧪 Safety Sandbox</a>
-          <a href="#" className="nav-link">📚 Chemical Registry</a>
-        </nav>
+      <div className="sidebar-brand">
+        <span className="logo-icon">☣️</span>
+        <h2>HazMat-X</h2>
       </div>
-      
+
+      <nav className="sidebar-menu">
+        <NavLink to="/" className="menu-item">📊 Central Dashboard</NavLink>
+        <NavLink to="/ledger" className="menu-item">📦 Inventory Ledger</NavLink>
+        <NavLink to="/sandbox" className="menu-item">🧪 Safety Sandbox</NavLink>
+        <NavLink to="/registry" className="menu-item">📚 Chemical Registry</NavLink>
+      </nav>
+
       <div className="sidebar-footer">
-       HazMat-X Core v1.0.0
+        <span>HazMat-X Core v1.0.0</span>
       </div>
     </aside>
   );

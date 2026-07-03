@@ -1,0 +1,80 @@
+
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background-color: #090d16 !important; 
+  min-height: 100vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 2rem 1.5rem !important;
+  box-sizing: border-box !important;
+  border-right: 1px solid #1e293b !important;
+}
+
+
+.sidebar-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.sidebar-brand .logo-icon {
+  font-size: 1.4rem !important;
+}
+
+.sidebar-brand h2 {
+  color: #ebff00 !important; 
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+}
+
+
+.sidebar-menu {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.6rem !important;
+  flex: 1 !important;
+}
+
+/* Protects links from turning purple, black, or adding underlines */
+.sidebar-menu a.menu-item,
+.sidebar-menu a.menu-item:link,
+.sidebar-menu a.menu-item:visited {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  padding: 0.75rem 1rem !important;
+  color: #cbd5e1 !important; /* Keeps text clearly visible */
+  text-decoration: none !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Hover highlights */
+.sidebar-menu a.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  color: #ffffff !important;
+}
+
+/* Active highlighting box layout */
+.sidebar-menu a.menu-item.active {
+  color: #f59e0b !important; 
+  background-color: rgba(245, 158, 11, 0.12) !important; 
+  font-weight: 600 !important;
+}
+
+/* Footer layout protection */
+.sidebar-footer {
+  color: #475569 !important;
+  font-size: 0.75rem !important;
+  border-top: 1px solid #1e293b !important;
+  padding-top: 1rem !important;
+  margin-top: auto !important;
+}
