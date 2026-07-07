@@ -1,0 +1,15 @@
+.app-layout {
+  display: flex !important;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #0b111e;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1 !important; /* Forces the page content to take up exactly the remaining right-side space */
+  height: 100vh;
+  overflow-y: auto; /* Allows the page content to scroll vertically independently of the sidebar */
+  background-color: #0b111e;
+  position: relative;
+}

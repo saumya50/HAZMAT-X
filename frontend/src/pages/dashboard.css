@@ -28,10 +28,9 @@ body,
 }
 
 .app-container {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--bg-main);
+  display: block;          /*Change from 'flex' or 'grid' to 'block' */
+  width: 100%;             /*Change from '100vw' to '100%' so it fits the remaining space */
+  box-sizing: border-box; /*Keeps padding inside the container so it doesn't cause overflow */
   color: var(--text-primary);
 }
 

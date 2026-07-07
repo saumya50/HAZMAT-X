@@ -1,72 +1,65 @@
 import React, { useState } from 'react';
-import './login.css';
+import './Login.css';
 
-export default function Login() {
-  const [credentials, setCredentials] = useState({ username: '', password: '' });
+export default function Login({ onLogin }) {
+  const [operatorId, setOperatorId] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
-  const handleChange = (e) => {
-    setCredentials({ ...credentials, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Temporary hardcoded credentials for testing before routing
-    if (credentials.username === 'admin' && credentials.password === 'safety123') {
+
+    // Mock Industrial Operator Authentication 
+    if (operatorId.toLowerCase() === 'admin' && password === 'hazmat2026') {
       setError('');
-      alert('Access Granted! Welcome to HazMat-X.');
-      // Routing logic will hook in here next
+      onLogin(); // Triggers global state shift to lift the login screen
     } else {
-      setError('CRITICAL ERROR: Invalid security credentials.');
+      setError('Invalid Operator Credentials. Verification failed.');
     }
   };
 
   return (
-    <div className="login-container">
-      <div className="login-panel">
-        <div className="login-header">
-          <div className="login-logo">☣️</div>
-          <h2>HAZMAT-X</h2>
-          <p>Materials Containment & Tracking Portal</p>
+    <div className="login-wrapper">
+      <div className="login-box">
+        <div className="login-brand">
+          <span className="brand-icon">☣️</span>
+          <h2>HazMat-X Portal</h2>
+          <p>Secure Terminal Access Allocation</p>
         </div>
 
         <form onSubmit={handleSubmit} className="login-form">
-          {error && <div className="login-error-badge">{error}</div>}
-
-          <div className="form-group">
-            <label>Operator Username</label>
-            <input
-              type="text"
-              name="username"
-              className="login-input"
-              placeholder="Enter terminal ID..."
-              value={credentials.username}
-              onChange={handleChange}
+          <div className="input-field">
+            <label>Operator Clearance ID</label>
+            <input 
+              type="text" 
+              placeholder="e.g., admin" 
+              value={operatorId}
+              onChange={(e) => setOperatorId(e.target.value)}
               required
             />
           </div>
 
-          <div className="form-group">
-            <label>Security Clearance Password</label>
-            <input
-              type="password"
-              name="password"
-              className="login-input"
-              placeholder="Enter secure passcode..."
-              value={credentials.password}
-              onChange={handleChange}
+          <div className="input-field">
+            <label>Security Passkey</label>
+            <input 
+              type="password" 
+              placeholder="••••••••" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
 
-          <button type="submit" className="login-button">
-            Initialize Terminal Session
+          {error && <div className="login-error-msg">{error}</div>}
+
+          <button type="submit" className="login-submit-btn">
+            Verify & Authenticate
           </button>
         </form>
 
-        <div className="login-footer">
-          
-        </div>
+        <footer className="login-footer">
+          <p>Authorized personnel operations only. Logs monitored systematically.</p>
+        </footer>
       </div>
     </div>
   );

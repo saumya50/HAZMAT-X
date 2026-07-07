@@ -1,77 +1,111 @@
-.dashboard-container {
-  display: flex !important;
-  flex-direction: row !important;
-  min-height: 100vh;
-  background-color: #0f172a;
-  width: 100%;
-}
-
-
-.main-content {
-  flex: 1;
+.ledger-container {
   padding: 2.5rem;
-  display: flex;
-  flex-direction: column;
+  color: #f8fafc;
+  background-color: #0b111e;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-
-.main-content h1 {
-  color: #f8fafc !important; 
-  margin: 0;
+.ledger-header h1 {
   font-size: 2rem;
-  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
 }
 
-.main-content .subtitle {
-  color: #94a3b8 !important; 
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+.ledger-header p {
+  color: #94a3b8;
+  margin-bottom: 2rem;
 }
 
-.analytics-placeholder-card {
+
+.control-panel {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 0.75rem 1rem;
   background-color: #1e293b;
   border: 1px solid #334155;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.filter-dropdown {
+  padding: 0.75rem 0.5rem;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+.table-wrapper {
+  background-color: #111827;
+  border: 1px solid #1e293b;
   border-radius: 8px;
-  padding: 3rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
+  overflow: hidden;
 }
 
-.matrix-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.analytics-placeholder-card h3 {
-  color: #f59e0b; 
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.analytics-placeholder-card p {
-  color: #94a3b8;
-  font-size: 0.9rem;
-  max-width: 400px;
-  line-height: 1.5;
-}
-
-.mock-chart-line {
+.ledger-table {
   width: 100%;
-  max-width: 200px;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #f59e0b, transparent);
-  margin-top: 2rem;
-  border-radius: 2px;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
 }
 
-.sidebar {
-  min-height: 100vh !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.ledger-table th {
+  background-color: #1e293b;
+  color: #94a3b8;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.ledger-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #1e293b;
+  color: #cbd5e1;
+}
+
+.ledger-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.chem-name {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.chem-formula code {
+  background-color: #1e293b;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: #38bdf8;
+}
+
+/* Custom Dynamic Hazard Badges */
+.hazard-badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.hazard-badge.flammable { background-color: rgba(239, 68, 68, 0.15); color: #ef4444; }
+.hazard-badge.corrosive { background-color: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+.hazard-badge.toxic { background-color: rgba(168, 85, 247, 0.15); color: #a855f7; }
+.hazard-badge.reactive { background-color: rgba(236, 72, 153, 0.15); color: #ec4899; }
+
+.no-results {
+  text-align: center;
+  color: #64748b;
+  padding: 2rem !important;
 }

@@ -5,7 +5,7 @@ import './chemicalRegistry.css';
 export default function ChemicalRegistry() {
   return (
     <div className="dashboard-container">
-      <Sidebar />
+      
       
       <main className="main-content">
         <header className="dashboard-header">
