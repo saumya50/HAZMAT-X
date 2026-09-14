@@ -10,6 +10,7 @@ import Login from './pages/Login';
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  
   return (
     <BrowserRouter>
     {!isAuthenticated ? (
